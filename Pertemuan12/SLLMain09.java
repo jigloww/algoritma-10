@@ -10,7 +10,7 @@ public class SLLMain09 {
         System.out.println("======== WELCOME TO SISTEM ========");
         System.out.print("Jumlah data mahasiswa yang ingin ditambahkan?: ");
         int jumlah = sc.nextInt();
-        sc.nextLine(); 
+        sc.nextLine();
 
         for (int i = 0; i < jumlah; i++) {
             System.out.println("Data Mahasiswa ke-" + (i + 1));
@@ -22,13 +22,22 @@ public class SLLMain09 {
             String kelas = sc.nextLine();
             System.out.print("IPK   : ");
             double ipk = sc.nextDouble();
-            sc.nextLine(); 
+            sc.nextLine();
 
             Mahasiswa09 mhs = new Mahasiswa09(nim, nama, kelas, ipk);
-            sll.addLast(mhs); 
+            sll.addLast(mhs);
         }
 
-        System.out.println("== Data Mahasiswa ==");
+        System.out.println("\ndata index 1 : ");
+        sll.getData(1);
+
+        System.out.println("data mahasiswa an Bimon berada pada index : " + sll.indexOf("Bimon"));
+        System.out.println();
+
+        sll.print();
+        sll.removeFirst();
+        sll.print();
+        sll.removeAt(0);
         sll.print();
     }
 }
