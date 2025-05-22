@@ -41,20 +41,20 @@ public class DLLMain09 {
                     Mahasiswa09 mhs = inputMahasiswa(scan);
                     list09.AddLast(mhs);
                 }
-                // case 3 -> list09.removeFirst();
-                // case 4 -> list09.removeLast();
+                case 3 -> list09.removeFirst();
+                case 4 -> list09.removeLast();
                 case 5 -> list09.print();
-                // case 6 -> {
-                //     System.out.println("Masukkan NIM yang dicari: ");
-                //     String nim = scan.nextLine();
-                //     Node09 found = list09.search(nim);
-                //     if (found != null) {
-                //         System.out.println("Data ditemukan: ");
-                //         found.data.tampil();
-                //     } else {
-                //         System.out.println("Data tidak ditemukan.");
-                //     }
-                // }
+                case 6 -> {
+                    System.out.println("Masukkan NIM yang dicari: ");
+                    String nim = scan.nextLine();
+                    Node09 found = list09.search(nim);
+                    if (found != null) {
+                        System.out.println("Data ditemukan: ");
+                        found.data.tampil();
+                    } else {
+                        System.out.println("Data tidak ditemukan.");
+                    }
+                }
                 case 7 -> {
                     System.out.print("Masukkan NIM setelah data mana ingin disisipkan: ");
                     String keyNim = scan.nextLine();

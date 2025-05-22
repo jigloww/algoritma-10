@@ -1,3 +1,5 @@
+import Pertemuan12.NodeMahasiswa09;
+
 public class DoubleLinkedList09 {
     Node09 head;
     Node09 tail;
@@ -74,9 +76,41 @@ public class DoubleLinkedList09 {
     while (current != null) {
         current.data.tampil();
         current = current.next;
+        }
     }
-}
 
-
+    public Node09 search(String nim) {
+        Node09 current = head;
+        while (current != null) {
+            if (current.data.nim.equals(nim)) {
+                return current;
+            }
+            current = current.next;
+        }
+        return null;
+    }
     
+    public void removeFirst() {
+        if (isEmpty()) {
+            System.out.println("Linked list masih kosong, tidak dapat dihapus!");
+            return;
+        } if (head == tail) {
+            head = tail = null;
+        } else {
+            head = head.next;
+            head.prev = null;
+        }
+    }
+
+    public void removeLast() {
+        if (isEmpty()) {
+            System.out.println("Linked list masih kosong, tidak dapat dihapus!");
+            return;
+        } if (head == tail) {
+            head = tail = null;
+        } else {
+            tail = tail.prev;
+            tail.next = null;
+        }
+    }
 }
